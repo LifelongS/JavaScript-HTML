@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<html>
+<body>
+<h1>Лабораторная работа №1</h1> 
+<h2>Задание 2</h2>
+
+<p>Для трёх переменных решить математические выражения и результаты вывести в окне браузера</p>
+<p>x = 6</p>
+<p>y = 15</p>
+<p>z = 4</p>
+<h2>Решение</h2>
+     <script>
+        var x = 6; var z3 = ++x; //document.write(" x = "+x+" ++x = "+z3+"<br/>");
+        var x = 6; var z4 = x++; //document.write(" x = "+x+" x++ = "+z4+"<br/>"+"<br/>");         
+        var x = 6; var zl = --x; //document.write(" x = "+x+" --x = "+zl+"<br/>");
+        /*var x = 6;var z2 = x--; //document.write(" x = "+x+" x-- = "+z2+"<br/>");
+        */
+         
+         // 1)
+         var x = 6; var y = 15; var z = 4;
+         var m = x += y - x++ * z;
+         document.write(" f += y - x++ * z"+"<br/>"+"f = "+m+"<br/>" 
+         +"x++ = "+z4+"<br/>"
+         +"y = "+y+"<br/>" 
+         +"z = "  +z+"<br/>"+"<br/>");
+         
+         // 2)         
+         var x = 6; var y = 15; var z = 4;       
+         var n = z = -- x - y * 5;        
+         document.write(" z = -- x - y * 5"+"<br/>"
+         +"--x = "+zl+"<br/>"+"y = "+y+"<br/>"
+         +"z = " + n +"<br/>"+"<br/>"+"<br/>");
+         
+         // 3)         
+         var x = 6; var y = 15; var z = 4;
+         var p = y /= x + 5 % z;         
+         document.write(" y /= x + 5% z "+"<br/>"
+         +"x = "+x+"<br/>"
+         +"y = "+p+"<br/>"
+         +"z = "+z+"<br/>"+"<br/>");
+         
+         // 4)         
+         var x = 6; var y = 15; var z = 4;       
+         var r = z = x++ + y * 5;         
+         document.write(" z = x++ + y * 5"+"<br/>"
+         +" x++ = "+z4+"<br/>"    
+         +"y = "+y+"<br/>"
+         +"z = "+r+"<br/>"+"<br/>");
+         
+         // 5)         
+         var x = 6; var y = 15; var z = 4;
+         var s = x = y - x++ * z;         
+         document.write(" f = y - x++ * z"+"<br/>"
+         +"f = "+s+"<br/>"
+         +" x++ = "+z4+"<br/>"
+         +"y = "+y+"<br/>"
+         +"z = "+z+"<br/>");
+
+     </script>
+</body> 
+</html>

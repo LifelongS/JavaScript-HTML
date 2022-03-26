@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<html>
+<body>
+<h1>Лабораторная работа №2</h1> 
+<h2>Задание 2</h2>
+
+<p>Пусть есть N магазинов, <br/>
+между каждой парой магазинов есть путь. <br/> 
+Напишите код вычисления количества <br/>
+возможных маршрутов обхода всех магазинов. <br/>
+Алгоритм генерации списка всех таких путей</p>
+
+<script>
+function finder(array) {
+  let combinations = [];
+  for (let i = 0; i < array.length; i++) {
+    let rest = finder(array.slice(0, i).concat(array.slice(i + 1)));
+    if (!rest.length) {
+      combinations.push([array[i]]);
+    } else {
+      for (let j = 0; j < rest.length; j++) {
+        combinations.push([array[i]].concat(rest[j]));
+      }
+    }
+  }
+  return combinations;
+}
+const shops = [1, 2, 3, 4];
+console.log(finder(shops));
+document.write(finder(shops)+"<br/>");
+</script>
+
+</body>
+</html>

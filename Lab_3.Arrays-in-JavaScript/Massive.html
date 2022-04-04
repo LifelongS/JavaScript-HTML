@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Лабораторная работа №3</h1> 
+<h2>Задание 1</h2>
+<p>Для заданного массива выполнить:<p>
+<p> 1. Поиск наибольшего значения массива<p>
+<p> 2. Поиск наименьшего значения массива<p>
+<p> 3. Определение суммы всех элементов массива<p>
+<p> 4. Определение среднего арифметического<p>
+
+<h2>Решение</h2>
+<script> 
+      let l = parseInt(prompt("Длина массива"));
+      let r = new Array(l);
+      let sum = 0;
+      let avr;
+        
+        for (let i = 0; i < r.length; i++) {
+            r[i] = parseInt(prompt("Заполняем массив - введите число"));
+            sum+=r[i];
+        }
+        avr=sum/l;
+        let min=r[0];
+        let max=r[0];
+      //  document.write("<hr/>");
+        document.write("Массив:"+"<br/>");
+        for (let i = 0; i < r.length; i++) {
+           document.write(r[i] + ", ");
+
+            if(r[i]<min){
+                min=r[i];
+            }
+            if(r[i]>max){
+                max=r[i];}
+            }
+
+         document.write("<br/>"+"<hr/>");
+         document.write("<p>1) Наибольшее значение массива - "+max);
+         document.write("<p>2) Наименьшее значение массива - "+min); 
+         document.write("<p>3) Сумма всех элементов массива = "+sum);
+         document.write("<p>4) Среднее арифметическое массива = "+avr);
+         document.write("<hr/>");       
+        for (let i = 0; i < r.length; i++) {
+            if(r[i]%2==1){
+          document.write("<p>"+r[i]);
+            }
+        }
+      // document.write("<hr/>");
+
+  min = myArray[0];
+  max = min;
+  for (i = 1; i < myArray.length; ++i) {
+      if (myArray[i] > max) max = myArray[i];
+ 
+      if (myArray[i] < min) min = myArray[i];
+      }
+</script>
+
+</body>
+</html>

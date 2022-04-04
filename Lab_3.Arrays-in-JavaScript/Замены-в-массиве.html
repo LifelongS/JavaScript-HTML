@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Лабораторная работа №3</h1> 
+<h2>Задание 2</h2>
+<p>Создать двумерный массив чисел размерностью 5Х5, содержащий положительные и отрицательные числа.</p>
+<p> Написать код просмотра всех элементов массива, изменяющий значения диагональных элементов по следующему правилу:</p>
+<p> если элемент содержит значение меньше 0, то его значение устанавливается равным 0,  иначе значение устанавливается равным 1.</p>
+<p> Вывести в окно браузера содержимое массива в виде двумерного массива строк.</p>
+<h2>Решение</h2>
+<script>
+let arr =new Array();
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+        }
+        for (let i = 0; i < 5; i++) {
+            arr.push([]);
+            for (let j = 0; j < 5; j++) {
+                arr[i].push(getRandomInt(-100, 100));
+            }
+        }
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                document.write(arr[i][j]+" ");
+            }
+            document.write("<br>");
+        }document.write("<hr/>");
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (i==j) {
+                    if (arr[i][j] < 0){
+                        arr[i][j] = 0;
+                    }else {
+                        arr[i][j] = 1;
+                    }
+                }
+                document.write(arr[i][j]+" ");
+            }
+            document.write("<br/>");
+        }
+</script>
+</body>
+</html>

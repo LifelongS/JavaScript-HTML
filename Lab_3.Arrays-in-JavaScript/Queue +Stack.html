@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Лабораторная работа №3</h1> 
+<h2>Задание 3</h2>
+<p>Написать код программной модели стека</p>
+
+<h2>Решение</h2>
+<p>Стек — линейная структура данных:</p>
+
+<script>
+// Программа Javascript для реализации Queue (очереди) с использованием
+// двух стеков с помощью Сostly enQueue() (добавления данных в очередь). 
+class Queue{
+     
+constructor()
+{
+    this.s1 = [3, 5, -3, 6, 143, 7, 12, -87, 54, 32, -78, 43];
+    this.s2 = [];
+}
+ 
+enQueue(x)
+{
+    // Переместим все элементы из s1 в s2
+    while (this.s1.length != 0)
+    {
+        this.s2.push(this.s1.pop());
+        //s1.pop();
+    }
+ 
+    // Вставим элемент в s1
+    this.s1.push(x);
+ 
+    // Вернем все назад в s1
+    while (this.s2.length != 0)
+    {
+        this.s1.push(this.s2.pop());
+        //s2.pop();
+    }
+}
+ 
+// Удаление элемента из очереди
+deQueue()
+{
+    // Если первый стек пуст
+    if (this.s1.length == 0)
+    {
+        document.write("Q is Empty");
+    }
+ 
+    // Вернем вершину s1
+    let x = this.s1[this.s1.length - 1];
+    this.s1.pop();
+    return x;
+}
+}
+ 
+// Вывод на экран:
+let q = new Queue();
+q.enQueue(1);
+q.enQueue(2);
+q.enQueue(3);
+q.enQueue(4);
+q.enQueue(5);
+q.enQueue(6);
+q.enQueue(7);
+q.enQueue(8);
+q.enQueue(9);
+q.enQueue(10);
+q.enQueue(11);
+q.enQueue(12);
+q.enQueue(13);
+
+ 
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+document.write(q.deQueue() + "<br>");
+
+
+</script>
+</body>
+</html>

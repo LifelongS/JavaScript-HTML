@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>Circles</title> 
+<script type="text/javascript" src="paper-full.js"></script> 
+<link rel="stylesheet" type="text/css" href="circles.css">
+
+<script type="text/paperscript" canvas="myCanvas"> 
+
+// Создадим  Paper.js Path, чтобы провести в нем линию:
+var path = new Path(); 
+// Придадим обводке цветовой контур\
+path.strokeColor = 'red'; 
+var start = new Point(0, 100); 
+// Переместимся в начало и проведем оттуда линию
+path. moveTo(start); 
+// Заливка фона
+path. lineTo(start + [ 500, -50 ]);
+var myCircle = new Path.Circle(new Point(100, 70), 10); 
+myCircle.fillColor = 'black';
+// Пурпурный круг
+var circle2 = new Path.Circle(new Point(50,50), 300); 
+circle2.fillColor = "purple";
+// Желтый круг
+var myCircle = new Path.Circle(new Point(100, 70), 50);
+myCircle.fillColor = 'yellow';
+
+</script> 
+</head> 
+<body>
+<canvas id="myCanvas" resize></canvas>
+</body> 
+</html>
+

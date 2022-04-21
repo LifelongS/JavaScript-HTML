@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?
+$pagetitle='Главная страница';
+require_once ('top.php');
+?>
+<title>Динамическое формирование страниц</title>
+</head>
+<body bgcolor=cornsilk>
+<h1>Динамическое формирование страниц</h1> 
+<h2>Лабораторная работа №13</h2>
+
+<?
+$pagetitle='Контакты';
+require_once ('top.php');
+?>
+
+<?php
+$file = "";
+if ($file == "") 
+{ 
+?>
+<h3>Пожалуйста, выберите текст:</h3>
+<a href="page1.phtml?link=1">Текст №1</a><br>
+<a href="page2.phtml?link=2">Текст №2</a><br>
+<a href="page3.phtml?link=3">Текст №3</a><br>
+<a href="page4.phtml?link=2">Текст №4</a><br>
+<a href="page5.phtml?link=2">Текст №5</a><br>
+<?php 
+}
+else
+{
+include($file);
+}
+?>
+
+</body>
+</html>
